@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayVsArrayList {
+    public static void main(String[] args) {
+//[0][1][2][3][4]
+        ArrayList<String> friendsArrayList = new ArrayList<>();
+        friendsArrayList.add("Mitch");
+        friendsArrayList.add("John");
+        friendsArrayList.add("Chris");
+        friendsArrayList.add("Eric");
+        friendsArrayList.add("Luke");
+
+        System.out.println("\n My First friend is " + friendsArrayList.get(0));
+
+
+        System.out.println("\n The size (number of elements " + friendsArrayList.size());
+
+        // Set change the data in na element
+        friendsArrayList.set(0, "Cristian");
+        System.out.println("\n my first friend is n (except Cristian) " + friendsArrayList.get(0));
+
+        // Remove the third element
+        friendsArrayList.remove(2);
+
+        //Output the list without a for  loop
+        System.out.println(friendsArrayList);
+
+        //out the list with a for loop
+
+        int friendArrayNumber = 1;
+
+        for (int i = 0; i < friendsArrayList.size(); i++)
+            System.out.println(" friend " + friendArrayNumber + " is " + friendsArrayList.get(i));
+        friendArrayNumber++;
+
+        for (int i = 0; i < 10; i++) {
+            friendsArrayList.add(i + 4, "new element");
+            System.out.println(" [!] new friend added to list");
+        }
+
+        int friendArrayNumber = 1;
+
+        for (int i = 0; i < friendsArrayList.size(); i++)
+            System.out.println(" friend " + friendArrayNumber + " is " + friendsArrayList.get(i));
+        friendArrayNumber++;
+
+    }
+    }
+}
